@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index) => {
+  const goToTestimonial = (index: number) => {
     setCurrentIndex(index);
   };
 

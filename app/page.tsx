@@ -11,6 +11,8 @@ import { caseStudies } from "@/components/data/caseStudies";
 import Header from "@/components/Header";
 import Image from "next/image";
 import TestimonialsSection from "@/components/Testimonials";
+import WorkingProcessAccordion from "@/components/WorkinProcess";
+import TeamCards from "@/components/TeamCard";
 
 export default function Home() {
   return (
@@ -48,7 +50,7 @@ export default function Home() {
         <div className="flex justify-between items-center gap-12 flex-col lg:flex-row bg-gray-100 rounded-3xl p-8 lg:p-12 ">
           <div className="lg:max-w-md">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-              Let's make things happen
+              Let&apos;s make things happen
             </h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about how our digital marketing
@@ -87,27 +89,7 @@ export default function Home() {
         heading="Working Process"
         subHeading="Step-by-Step Guide to Achieving Your Business Goals"
       >
-        <div className="space-y-6">
-          {workingProcess.map((step, index) => (
-            <div
-              key={index}
-              className="bg-gray-100 rounded-3xl p-8 border border-black"
-            >
-              <div className="flex items-start gap-6">
-                <span className="text-4xl font-bold text-black">
-                  {step.number}
-                </span>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-                <Button variant="icon" size="lg">
-                  <span className="text-xl">+</span>
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
+        <WorkingProcessAccordion />
       </SectionContainer>
 
       {/* Team Section */}
@@ -115,36 +97,7 @@ export default function Home() {
         heading="Team"
         subHeading="Meet the Skilled and Experienced Team Behind Our Successful Digital Marketing Strategies"
       >
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <div
-              key={index}
-              className="bg-white border border-black rounded-3xl p-8 hover:shadow-lg transition-shadow"
-            >
-              <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6"></div>
-              <h3 className="text-xl font-bold text-center mb-2">
-                {member.name}
-              </h3>
-              <p className="text-green-600 text-center font-semibold mb-4">
-                {member.position}
-              </p>
-              <p className="text-gray-600 text-center text-sm">
-                {member.experience}
-              </p>
-              <div className="flex justify-center mt-6">
-                <Button variant="primary" size="sm" className="rounded-full">
-                  <span>in</span>
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button variant="primary" size="lg">
-            See all team
-          </Button>
-        </div>
+        <TeamCards />
       </SectionContainer>
 
       <SectionContainer

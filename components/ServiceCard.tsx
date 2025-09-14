@@ -14,10 +14,8 @@ interface ServiceCardProps {
 
 export default function ServiceCard({
   title,
-  icon,
   bgColor,
   titleBgColor,
-  iconBgColor,
   textColor,
   hoverColor,
   img,
@@ -41,7 +39,7 @@ export default function ServiceCard({
           </h3>
         </div>
         <Image
-          src={img}
+          src={img ?? "/Find.svg"}
           alt="Find"
           width={200}
           height={200}
