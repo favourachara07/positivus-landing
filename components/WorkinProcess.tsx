@@ -22,7 +22,7 @@ export default function WorkingProcessAccordion() {
             key={index}
             className={`rounded-3xl border-2 border-black transition-all duration-300 ${
               isOpen 
-                ? 'bg-green-300' 
+                ? 'bg-[#B9FF66]' 
                 : 'bg-gray-100 hover:bg-gray-200'
             }`}
             layout
@@ -50,7 +50,7 @@ export default function WorkingProcessAccordion() {
                       ? 'bg-white hover:bg-gray-100' 
                       : 'bg-transparent hover:bg-white'
                   }`}
-                  animate={{ rotate: isOpen ? 45 : 0 }}
+                  animate={{ rotate: isOpen ? 0 : 0 }}
                   transition={{ duration: 0.2 }}
                 >
                   {isOpen ? (

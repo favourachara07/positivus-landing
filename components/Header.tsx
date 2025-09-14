@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between px-6 py-4 lg:px-20">
         <div className="flex items-center">
-          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+          <div className="w-8 h-8  flex items-center justify-center">
             <Image src="/post.svg" alt="Logo" width={32} height={32} />
           </div>
           <span className="ml-2 text-2xl font-bold">Positivus</span>

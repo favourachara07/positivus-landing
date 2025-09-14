@@ -14,7 +14,7 @@ export default function SectionContainer({
   return (
     <div>
       {hero ? (
-        <section className="px-6 py-12 lg:px-20 lg:py-20">
+        <section className="px-6 py-18 lg:px-20 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6">
@@ -29,7 +29,7 @@ export default function SectionContainer({
                 Book a consultation
               </button>
             </div>
-            <div className=" rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
+            <div className=" rounded-2xl p-8  lg:flex items-center justify-center min-h-[400px] hidden ">
               <Image
                 src="/Illustration.svg"
                 alt="Hero Image"
@@ -37,18 +37,18 @@ export default function SectionContainer({
                 // objectFit="cover"
                 height={400}
                 width={400}
-                className="rounded-2xl"
+                className="rounded-2xl "
               />
             </div>
           </div>
         </section>
       ) : (
         <section className="px-6 py-12 lg:px-20">
-          <div className="flex items-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold bg-[#B9FF66] px-2 py-1 rounded">
+          <div className="flex flex-col lg:flex-row items-center mb-12  md:max-lg:text-center">
+            <h2 className="text-2xl lg:text-4xl font-bold bg-[#B9FF66] px-2 py-1 rounded">
               {heading}
             </h2>
-            <p className="ml-4 text-lg text-gray-600 max-w-lg">{subHeading}</p>
+            <p className="ml-4 text-md  text-gray-600 max-w-lg">{subHeading}</p>
           </div>
           {children}
         </section>

@@ -5,7 +5,6 @@ import ContactIllustration from "@/components/Form/ContactIllustration";
 import ServiceCard from "@/components/ServiceCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import Button from "@/components/Button";
-import { team, workingProcess } from "@/components/array";
 import { services } from "@/components/data/services";
 import { caseStudies } from "@/components/data/caseStudies";
 import Header from "@/components/Header";
@@ -13,6 +12,7 @@ import Image from "next/image";
 import TestimonialsSection from "@/components/Testimonials";
 import WorkingProcessAccordion from "@/components/WorkinProcess";
 import TeamCards from "@/components/TeamCard";
+import { AnimatedLogoSliderWithPause } from "@/components/Logo";
 
 export default function Home() {
   return (
@@ -22,6 +22,7 @@ export default function Home() {
       {/* Hero Section */}
       <SectionContainer hero={true} />
 
+      <AnimatedLogoSliderWithPause />
       {/* Services Section */}
       <SectionContainer
         heading="Services"
@@ -60,7 +61,7 @@ export default function Home() {
               Get your free proposal
             </Button>
           </div>
-          <div>
+          <div className="hidden lg:block">
             <Image src="/happen.svg" alt="CTA Image" width={400} height={300} />
           </div>
         </div>
@@ -116,7 +117,7 @@ export default function Home() {
             <div className="flex-grow">
               <ContactForm />
             </div>
-            <div className="flex justify-between lg:relative lg:left-70 lg:top-1/2 ">
+            <div className="lg:flex hidden justify-between lg:relative lg:left-70 lg:top-1/2 ">
               <ContactIllustration />
             </div>
           </div>
